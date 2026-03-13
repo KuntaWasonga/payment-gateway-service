@@ -2,5 +2,19 @@
 // This lets us reorganise internal files without breaking every import.
 
 export {
-    AppError
+    AppError,
+    ValidationError,
+    UnauthorizedError,
+    PaymentGatewayError,
+    NotFoundError
 } from "./errors.js";
+
+export type {
+    CreatePaymentRequest,
+    PaymentResult,
+    RefundRequest,
+    RefundResult,
+    WebhookEvent,
+} from "./payments.js";
+
+export { PaymentStatus } from "./payments.js";
